@@ -18,7 +18,10 @@ const Header: React.FC = () => {
     <div className={`header ${isOpen ? "open" : ""}`}>
       <div className="logo-menu">
         <Link to="/">
-          <img src={logo?.url} alt="Logo" />
+          <img
+            src="https://georgian.io/wp-content/uploads/2021/06/Contentstack-2024-Logo-Primary-Clearspace.svg"
+            alt="Logo"
+          />
         </Link>
       </div>
       <nav className={`nav ${isOpen ? "active" : ""}`}>

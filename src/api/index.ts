@@ -82,11 +82,12 @@ export const fetchHomePageData = async (
   dispatch: Dispatch<any>
 ): Promise<void> => {
   const data: any = await getEntryByUrl({
-    contentTypeUid: CONTENT_TYPES.PAGE,
+    contentTypeUid: "blog_post",
     entryUrl: "/",
-    referenceFieldPath: undefined,
+    referenceFieldPath: ["author"],
     jsonRtePath: undefined,
   });
+  debugger;
   dispatch(setHomePageData(data[0]));
 };
 
@@ -96,8 +97,8 @@ export const fetchInitialData = async (
 ): Promise<void> => {
   try {
     await Promise.all([
-      fetchHeaderData(dispatch),
-      fetchFooterData(dispatch),
+      // fetchHeaderData(dispatch),
+      // fetchFooterData(dispatch),
       fetchHomePageData(dispatch),
     ]);
     setLoading(false);
@@ -105,6 +106,22 @@ export const fetchInitialData = async (
     console.error("Error fetching data:", error);
   }
 };
+
+// export const fetchBlogPost = async (
+//   dispatch: Dispatch<any>,
+//   setLoading: (status: boolean) => void
+// ): Promise<void> => {
+//   try {
+//     await Promise.all([
+//       fetchHeaderData(dispatch),
+//       fetchFooterData(dispatch),
+//       fetchHomePageData(dispatch),
+//     ]);
+//     setLoading(false);
+//   } catch (error) {
+//     console.error("Error fetching data:", error);
+//   }
+// };
 
 // COMMENT: Uncomment below code
 

@@ -25,10 +25,8 @@ const Footer: React.FC = () => {
         )}
         {information_section && (
           <div className="footer-info">
-            <img src={information_section.logo?.url} alt="Footer" />
-
             <p>{information_section?.descrption}</p>
-            <h3>Hours</h3>
+            <h3>Copyright 2024</h3>
             <p style={{ opacity: 0.8 }}>{information_section?.timings}</p>
             <p style={{ opacity: 0.8 }}>{information_section?.holiday}</p>
           </div>

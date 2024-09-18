@@ -606,3 +606,11 @@
     }
   }
 }
+
+.article {
+  padding: 3rem;
+}
+
+.author-info {
+  padding: 0 0 3rem 3rem;
+}
